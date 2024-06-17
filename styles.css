@@ -1,0 +1,189 @@
+body {
+  font-family: Verdana (sans-serif);
+  background-color: #bfbfbf;
+}
+
+#game-title {
+  transition: 2s;
+}
+
+#svg {
+  border: solid black;
+  background-color: beige;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.state-name:hover {
+
+}
+
+.highlight {
+    filter: invert(12%) sepia(49%) saturate(3312%) hue-rotate(319deg) brightness(99%) contrast(96%);
+}
+
+.wrong {
+  filter : invert(39%) sepia(78%) saturate(7492%) hue-rotate(359deg) brightness(103%) contrast(113%)
+}
+
+.correct {
+  filter: invert(59%) sepia(85%) saturate(4157%) hue-rotate(79deg) brightness(140%) contrast(109%)
+}
+
+#game-title {
+  text-align: center;
+  background-color: #e6e6e6;
+  font-size: 25px;
+  width: auto;
+  padding: 5px;
+  margin: 5px;
+  border: solid black;
+  border-radius: 10px;
+}
+
+#player-one-menu {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+  border: solid black;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+
+#guess-this-state {
+  transition: 0.20s;
+  text-align: center;
+  background-color: #e6e6e6;
+  font-size: 25px;
+  width: auto;
+  padding: 5px;
+  margin: 5px;
+  border: solid black;
+  border-radius: 10px;
+}
+
+#guess-this-state:hover {
+  scale: 1.01;
+  background-color: white;
+  color: black
+}
+
+#player-stats {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+#player-stats > div {
+  transition: 0.20s;
+  background-color: #e6e6e6;
+  font-size: 25px;
+/*   max-height: 100px; */
+  width: 50%;
+  padding: 5px;
+  border: solid black;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+#player-stats > div:hover {
+  scale: 1.01;
+  background-color: white;
+  color: black
+}
+
+#start-button {
+  transition: 0.3s ease-in-out;
+  font-size: 25px;
+  background-color: #e6e6e6;
+  padding: 5px;
+  border: solid black;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+  #start-button:hover {
+  scale: 1.01;
+  background-color: blue;
+  color: white;
+}
+
+#reset-button {
+  transition: 0.3s ease-in-out;
+/*   transition-timing-function: ease-in-out */
+  font-size: 25px;
+  background-color: #e6e6e6;
+  padding: 5px;
+  border: solid black;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+#reset-button:hover {
+  scale: 1.01;
+  background-color: red;
+  color: white;
+}
+
+@keyframes wrong-blink {
+  from {
+background-color: red;}
+  to {
+background-color: #e6e6e6;}
+}
+
+@keyframes correct-blink {
+  from {
+background-color: green;}
+  to {
+background-color: #e6e6e6;}
+}
+
+.wrong-blink-class {
+  animation: wrong-blink 0.50s linear 1
+}
+
+.correct-blink-class {
+  animation: correct-blink 0.50s linear 1
+}
+
+.timer-hide {
+  overflow: hidden;
+  max-height: 30px;
+  max-width: 10px;
+  color: #e6e6e6;
+}
+
+/* heres a little easter egg for being so curious ;) */
+#game-title:active {
+  background: radial-gradient(circle, rgba(0,42,255,1) 6%, rgba(255,255,255,1) 43%, rgba(255,155,155,1) 74%, rgba(255,0,0,1) 84%);
+}
+
+@media screen and (max-width: 480px) {
+  
+  #player-stats {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  #player-stats > div {
+  background-color: #e6e6e6;
+  font-size: 25px;
+/*   max-height: 100px; */
+  width: auto;
+  padding: 5px;
+  border: solid black;
+  border-radius: 10px;
+  margin: 5px;
+  }
+  
+  .timer-hide {
+  overflow: hidden;
+/*   max-height: 10px; */
+  min-width: 93%;
+  color: #e6e6e6;
+  }
+}
